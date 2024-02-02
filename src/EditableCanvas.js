@@ -50,7 +50,6 @@ const EditableCanvas = () => {
 
   // Event handler to toggle the completed status of a task
   const handleTaskClick = (taskId) => {
-    console.log("SEcond here");
     setTaskList((prevTaskList) =>
       prevTaskList.map((task) =>
         task.id === taskId ? { ...task, completed: !task.completed } : task
@@ -63,6 +62,11 @@ const EditableCanvas = () => {
     lastClickedRef.current = true;
   };
 
+  const handleDeleteTask = (taskId) => {
+    setTaskList((prevTaskList) =>
+      prevTaskList.filter((task) => task.id !== taskId)
+    );
+  };
   useEffect(() => {
     canvasRef.current.focus();
   }, []);
@@ -90,6 +94,9 @@ const EditableCanvas = () => {
           <li
             key={task.id}
             style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
               textDecoration: task.completed ? "line-through" : "none",
               cursor: "pointer",
               listStyle: "none", // Remove default list styles
@@ -100,6 +107,7 @@ const EditableCanvas = () => {
               {task.completed ? "💕 " : "◻️ "}
             </span>
             {task.task}
+            <button onClick={() => handleDeleteTask(task.id)}>🗑️</button>
           </li>
         ))}
       </ul>
