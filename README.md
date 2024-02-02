@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Editable Task List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project provides a simple and interactive canvas for managing tasks, allowing users to add, edit, and mark tasks as completed.
 
-## Available Scripts
+The application is built using React and leverages local storage to persist tasks across page refreshes.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Interactive Canvas
+- Task List Management
+- Local Storage Integration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### How to use
 
-### `npm test`
+#### 1. Adding a Task:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Click on the blank portion of the canvas.
+- A prompt will appear, allowing you to enter the task description.
+- Confirming the prompt adds the new task to the list.
 
-### `npm run build`
+#### 2. Completing a Task:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Click on an existing task to toggle its completion status.
+- Completed tasks are visually marked with a strikethrough.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 3. Persistence:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The task list is automatically saved to local storage, ensuring that tasks are retained across sessions.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Getting started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`git clone https://github.com/your-username/editable-canvas.git`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`cd editable-canvas`
 
-## Learn More
+2.  Install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm install`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Run the application:
 
-### Code Splitting
+`npm start`
+Open your browser and navigate to http://localhost:3000 to view the Editable Canvas for Task Management.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### Technologies used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React
+- JavaScript (ES6+)
+- HTML5
+- CSS3
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Contribution
 
-### Advanced Configuration
+Contributions are welcome! Feel free to submit issues, feature requests, or pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the **MIT License.**
