@@ -2,19 +2,22 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const EditableCanvas = () => {
+  const initialTaskList = JSON.parse(localStorage.getItem("taskList")) || [];
+
+  const initialCounter =
+    initialTaskList.length > 0 ? initialTaskList.length + 1 : 1;
   // State to manage the ordered list of tasks
-  const [taskList, setTaskList] = useState([]);
+  const [taskList, setTaskList] = useState(initialTaskList);
 
   // Counter for generating unique keys
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState(initialCounter);
 
   const canvasRef = useRef(null);
 
-  const lastClickedRef = useRef(null);
+  const lastClickedRef = useRef(false);
 
   // Event handler to add a task on canvas click
   const handleCanvasClick = (e) => {
-    console.log("First here");
     if (lastClickedRef.current) {
       lastClickedRef.current = false; // Reset the ref
 
@@ -63,6 +66,10 @@ const EditableCanvas = () => {
   useEffect(() => {
     canvasRef.current.focus();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("taskList", JSON.stringify(taskList));
+  }, [taskList]);
 
   return (
     <div
