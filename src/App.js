@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Clickable Canvas</h1>
+        <h1>Travel things to consider</h1>
         <EditableCanvas />
       </header>
     </div>
